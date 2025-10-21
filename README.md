@@ -6,5 +6,8 @@ Performed **C**ontrast **L**imited **A**daptive **H**istogram **E**qualization o
 ### Original Image
 ![image](https://github.com/yadhuInG1thub/capstone/blob/main/images/thermal_image.jpg)
 
+### Logarithmic Transformation output
+![image](https://github.com/yadhuInG1thub/capstone/blob/main/images/log_transformed.jpg)
+
 ### CLAHE output
 ![image](https://github.com/yadhuInG1thub/capstone/blob/main/images/thermal_clahe.jpg)
