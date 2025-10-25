@@ -1,0 +1,14 @@
+img = cv2.imread('thermal_image.jpg')
+lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
+l, a, b = cv2.split(lab)
+
+# Contrast stretch only the L-channel (lightness)
+l_min, l_max = np.min(l), np.max(l)
+l_stretch = ((l - l_min) / (l_max - l_min)) * 255
+l_stretch = l_stretch.astype(np.uint8)
+
+# Merge and convert back
+lab_stretch = cv2.merge((l_stretch, a, b))
+stretched_img = cv2.cvtColor(lab_stretch, cv2.COLOR_LAB2BGR)
+
+cv2.imwrite('thermal_contrast_stretched_color.jpg', stretched_img)
